@@ -63,9 +63,9 @@ let's try to console.log('Request is received') using use() function.
 
 */
 
-app.use((req, res) => {
-   console.log("Request is received");
-});
+// app.use((req, res) => {
+//    console.log("Request is received");
+// });
 
 /* 
 Notice that nothing will happen apart from whenever
@@ -74,3 +74,10 @@ we are going to the URL- localhost:3000, it is saying
 
 Atleast we can confirm that request is received.
 */
+
+app.use((req, res) => {
+   console.log("Request is received");
+   res.send("<h1>First Response in Express</h1> <button>Click Me</button>");
+});
+
+/* Now go to the browser and check out */
